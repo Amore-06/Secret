@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A little something for you</title>
+
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ INTRO ============ -->
+<section class="intro">
+  <p class="intro-eyebrow">Before you scroll any further</p>
+
+  <p class="intro-joke">HI! I made a little something for you. Something I can't directly say personally LOL.</p>
+
+  <p class="intro-sub">
+    There are about 10 songs here, each one means something I couldn't quite say directly, so I'm saying it like this instead.
+    Press play on any of them when you're ready.
+  </p>
+
+  <button class="intro-cta" id="introCta">okay, i'm ready</button>
+
+  <div class="intro-hint">
+    <span>scroll</span>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </div>
+</section>
+
+<!-- ============ PLAYLIST ============ -->
+<section class="playlist" id="playlist">
+  <div class="playlist-head">
+    <h1 class="playlist-title">Songs I specially picked</h1>
+    <p class="playlist-desc">Tap a song to open it — cover, lyrics, and the reason it made the cut.</p>
+  </div>
+
+  <div id="trackList"></div>
+</section>
+
+<!-- ============ OVERLAY (filled by JS) ============ -->
+<div class="overlay" id="overlay">
+  <div class="overlay-backdrop" id="overlayBackdrop"></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <button class="sheet-close" id="sheetClose" aria-label="Close">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 4l10 10M14 4L4 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+
+    <div class="sheet-top">
+      <div class="sheet-cover" id="sheetCover"></div>
+      <div>
+        <p class="sheet-heading-eyebrow" id="sheetEyebrow">track</p>
+        <h2 class="sheet-title" id="sheetTitle"></h2>
+        <p class="sheet-artist" id="sheetArtist"></p>
+      </div>
+    </div>
+
+    <audio class="sheet-audio" id="sheetAudio" controls></audio>
+
+    <div class="sheet-section">
+      <p class="sheet-label">why this one</p>
+      <p class="sheet-reason" id="sheetReason"></p>
+    </div>
+
+    <div class="sheet-section">
+      <p class="sheet-label">lyrics</p>
+      <p class="sheet-lyrics" id="sheetLyrics"></p>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
